@@ -1,0 +1,131 @@
+.mainDiv-staff{
+    height: 100vh;
+}
+
+.colNotes-staff{
+    background-color: white;
+    margin: 1rem;
+    height: 94vh;
+    border-radius: 25px;
+    padding: 1rem;
+    text-align: center;
+    overflow: scroll;
+}
+.colNotes-staff::-webkit-scrollbar{
+    display: none;
+}
+
+.mainRow-staff{
+    margin: 0;
+}
+
+.rowWorkers-staff{
+    background-color: white;
+    height: 40vh;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+.rowTasks-staff{
+    background-color: white;
+    height: 52vh;
+    border-radius: 25px;
+    padding: 0.6rem;
+    text-align: center;
+}
+
+.buttonAddWorker-staff{
+    width: 20vw;
+    justify-content: center;
+    margin: auto;
+    margin-top: 0.4rem;
+    border-radius: 25px;
+    height: 4vh;
+}
+.buttonAddNotes-staff{
+    margin-top: 1rem;
+    border-radius: 25px;
+    
+}
+
+.completeTask-staff{
+    margin-top: 0.4rem;
+}
+.inProgressTask-staff{
+    height: 32vh;
+    margin-top: 0.4rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100vh;
+}
+.inPtogressTaskCol-staff{
+    display: inline-block;
+    margin: 0 10px;
+}
+.inProgressTaskDiv-staff{
+    display: inline-block;
+    margin: 5px;
+    background-color: #f0f0f0;
+    height: 80%;
+}
+.carousel-control-next{
+    z-index: 0;
+}
+.carousel-control-prev{
+    z-index: 0;
+}
+.carousel-control-prev-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black'%3E%3Cpath strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M15 19l-7-7 7-7'%3E%3C/path%3E%3C/svg%3E");
+}
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black'%3E%3Cpath strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M15 19l7-7-7-7'%3E%3C/path%3E%3C/svg%3E");
+}
+.carousel-indicators  {
+    background-color: #08F5FD;
+    margin-bottom: 0;
+    z-index: 0;
+    height: 2.2vh;
+}
+.carousel-indicators .active {
+    background-color: black;
+}
+
+.buttonAddTaskSelf-staff{
+    bottom: 0;
+    height: 4vh;
+    width: 20vw;
+    font-size: 8px;
+    margin: auto;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 700px){
+    .colNotes-staff{
+        margin-left: 0;
+    }
+    .buttonAddWorker-staff{
+        width: 90%;
+    }
+    .buttonAddTaskSelf-staff{
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 700px){
+    .colNotes-staff{
+        margin-left: 0.3rem;
+    }
+    .mainDiv-staff{
+        height: auto;
+    }
+    .buttonAddWorker-staff{
+
+        height: auto;
+    }
+    .buttonAddTaskSelf-staff{
+        width: auto;
+    }
+}

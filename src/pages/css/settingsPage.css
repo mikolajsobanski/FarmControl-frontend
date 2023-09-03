@@ -1,0 +1,112 @@
+.mainDiv-settings{
+    height: 100vh;
+}
+
+.row-settings{
+    width: 100%;
+    margin: auto;
+    
+}
+
+.profileCol-settings{
+    background-color: white;
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.updateCol-settings{
+    background-color: white;
+    margin: 0.6rem;
+    text-align: center;
+    border-radius: 25px;
+    padding: 0.5rem;
+}
+
+.button-settings{
+    justify-content: center;
+    margin: 1rem;
+    width: 20vw;
+}
+
+.img-settings {
+    border-radius: 50%;
+    width: 5vw;
+    height: 10vh;
+    
+}
+
+.prfileColDiv-settings{
+    font-size: 22px;
+    padding: 0.6rem;
+}
+
+.helpRow-settings{
+    background-color: white;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border-radius: 25px;
+    text-align: center;
+    
+}
+
+.formEmailContact-settings{
+    height: 2vh;
+    margin-bottom: 0.4rem;
+}
+.buttonEmailContact-settings{
+    height: 5vh;
+    margin-top: 0.4rem;
+}
+
+
+
+
+
+
+@media screen and (max-width: 700px){
+    .profileCol-settings{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .updateCol-settings{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .button-settings{
+        width: 60vw;
+    }
+    .img-settings{
+        width: 22vw;
+        height: 12vh;
+    }
+    .prfileColDiv-settings{
+        font-size: 18px;
+        padding: 0.4rem;
+    }
+    .helpRow-settings{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and ( max-width: 1200px) and (min-width: 700px){
+    .prfileColDiv-settings{
+        font-size: 18px;
+        padding: 0.5rem;
+    }
+    .img-settings{
+        width: 8vw;
+        height: 12vh;
+    }
+
+}

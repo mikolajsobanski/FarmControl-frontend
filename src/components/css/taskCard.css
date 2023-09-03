@@ -1,0 +1,74 @@
+.card-taskCard{
+    height: 28vh;
+    width: 13vw;
+    word-wrap: break-word; 
+    white-space: normal;
+    margin: 0;
+}
+.card-taskCard:hover{
+    cursor: pointer;
+}
+.description-taskCard{
+    font-size: 10px;
+}
+
+.comment-task{
+    left: 0;
+    margin-top: 2rem;
+    width: 10vw;
+}
+
+.imgComment-task{
+    border-radius: 50%;
+    width: 3vw;
+    height: 5vh;
+}
+.buttonAddComment-task{
+    height: 5vh;
+    bottom: 0;
+}
+.addCommentRow-task{
+    margin-top: 1rem;
+}
+.creationDateRow-task{
+    margin-top: 2rem;
+}
+.statusDiv-task{
+    left: 0;
+    width: 10vw;
+}
+.statusRow-task{
+    margin-top: 2rem;
+}
+.statusInProgressDiv-task{
+    color: #2ECC71;
+
+}
+.editIconDiv-task{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+.editIconDiv-task:hover{
+    color: #08F5FD;
+    cursor: pointer;
+}
+.statusCompleteDiv-task{
+    color: red;
+}
+.taskContentDiv-task{
+    width: 100%;
+    overflow: scroll;
+}
+.taskOwnerRow-task{
+    margin-top: 1rem;
+}
+.buttons-task{
+    margin-top: 1rem;
+}
+.cardOverflow-task{
+    width: 100%; 
+    max-width: 100%; 
+    word-wrap: break-word; 
+    white-space: normal; 
+}

@@ -1,0 +1,38 @@
+.mainDiv-taskComment{
+    margin-top: 2rem;
+    
+}
+.ownerUpdateDiv-taskComment{
+    display: flex;
+    
+}
+.ownerDiv-taskComment{
+    margin-right: 2rem;
+}
+.editDeleteRow-taskComment{
+    margin-top: 1rem;
+}
+.commentContentRow-taskComment{
+    width: 100%; 
+    max-width: 100%; 
+    word-wrap: break-word; 
+    white-space: normal;
+    margin: 0;
+}
+.editCommentDiv-taskComment{
+    margin-right: 2rem;
+}
+.editCommentDiv-taskComment:hover{
+    cursor: pointer;
+    color: #08F5FD;
+}
+.deleteCommentDiv-taskComment:hover{
+    cursor: pointer;
+    color: red;
+}
+.headerDeleteCommentPopup-taskComment{
+    width: 100%; 
+    max-width: 100%; 
+    word-wrap: break-word; 
+    white-space: normal;
+}

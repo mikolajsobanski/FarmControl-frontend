@@ -1,0 +1,31 @@
+.card-animalDiscoverCard{
+    border-radius: 25px;
+}
+.bodyCard-animalDiscoverCard{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.img-animalDiscoverCard{
+    display: flex;
+    height: 54vh;
+    width: 24vw;
+    background-size: cover; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+.img-animalDiscoverCard:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(238, 5, 5, 0.1);
+}
+.title-animalDiscoverCard{
+    margin-top: 1rem;
+    text-align: center;
+}
+.img-animalDiscoverCardPopup{
+    display: flex;
+    height: 45vh;
+    width: 24vw;
+    background-size: cover; 
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}

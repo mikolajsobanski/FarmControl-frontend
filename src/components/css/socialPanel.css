@@ -1,0 +1,25 @@
+.socialPanel-container{
+    background: black;
+    padding: 1em;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #B9B9B9;
+}
+a:hover {
+    transition: .5s;
+    color:red;
+}
+.facebook:hover{
+    color: #3B5998;
+}
+.instagram:hover{
+    color: #8134AF;
+}
+.linkedin:hover{
+    color:#0E76A8;
+}
+.twitter:hover{
+    color:#08F5FD;
+}

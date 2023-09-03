@@ -1,0 +1,83 @@
+.img-workerCard{
+    border-radius: 50%;
+    width: 5vw;
+    height: 10vh;
+    margin-top: 0.4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-workerCard{
+    height: 22vh;
+}
+.addTaskIcon-workerCard{
+    
+    font-size: 24px;
+}
+.addTaskIcon-workerCard:hover{
+    color: #08F5FD;
+}
+.addTaskIcon-workerCard:hover .textHoverAddTask-workerCard{
+    display: block;
+}
+.deleteIcon-workerCard{
+    
+    font-size: 24px;
+}
+.deleteIcon-workerCard:hover{
+    color: red;
+}
+.deleteIcon-workerCard:hover .textHoverDelete-workerCard{
+    display: block;
+}
+.textHoverAddTask-workerCard{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    padding: 0.4rem;
+    background-color: #333;
+    color: #fff;
+    opacity: 0.8;
+    z-index: 9999;
+}
+
+.textHoverDelete-workerCard{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    padding: 0.4rem;
+    background-color: #333;
+    color: #fff;
+    opacity: 0.8;
+    z-index: 9999;
+}
+.formDeletePopup-workerCard{
+    padding: 2rem;
+}
+.buttonDeletePopup-workerCard{
+    margin-top: 2rem;
+}
+
+
+@media screen and (max-width: 700px){
+    .img-workerCard{
+        width: 15vw;
+        height: 10vh;
+        margin-top: 0.3rem;
+    }
+    .card-workerCard{
+        width: 100%;
+    }
+    .carousel-control-next{
+        margin-right: 0.4rem;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 700px){
+    .img-workerCard{
+        width: 8vw;
+        height: 10vh;
+    }
+    
+}

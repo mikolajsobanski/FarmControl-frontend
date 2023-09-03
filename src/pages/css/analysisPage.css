@@ -1,0 +1,46 @@
+.mainDiv-AnalysisPage{
+    height: 100vh;
+}
+.reportsHeader-AnalysisPage{
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    padding-bottom: 0.6rem;
+}
+.analysisHeader-AnalysisPage{
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    padding-top: 0.4rem;
+}
+.reportsIcon-AnalysisPage{
+    font-size: 22px;
+}
+.analysisRow-AnalysisPage{
+    background-color: white;
+    border-radius: 25px;
+    padding: 0.6rem;
+    height: 48vh;
+    margin: 1rem;
+}
+.reportsRow-AnalysisPage{
+    margin: 1rem;
+}
+.fullReportCol-AnalysisPage{
+    background-color: white;
+    border-radius: 25px;
+    padding: 0.6rem;
+}
+.monthlyReportCol-AnalysisPage{
+    background-color: white;
+    border-radius: 25px;
+    padding: 0.6rem;
+    height: 35vh;
+    margin-left: 1rem;
+}
+.reportsColumnHeader-AnalysisPage{
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    
+}

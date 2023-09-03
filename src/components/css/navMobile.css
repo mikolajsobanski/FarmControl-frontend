@@ -1,0 +1,19 @@
+.navMobile-container{
+    background: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    text-align: center;
+}
+.items-navMobile{
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+.item-navMobile{
+    padding-left: 1rem;
+}
+.item-navMobile:hover{
+    color: hsl(186, 100%, 38%);
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,17 @@
+.mainDiv-homePage{
+    width: 100%;
+    height: 100vh;
+}
+.contentDiv-homePage{
+    position: relative;
+}
+.bottomContentDiv-homePage{
+    position: fixed;
+    bottom: 0;
+    width: 84vw;
+}
+.searchPanelDiv-homePage{
+    justify-content: center;
+    display: flex;
+    margin-top: 4rem;
+}

@@ -1,0 +1,16 @@
+.card-noteCard{
+    border-radius: 25px;
+    margin-top: 1rem;
+}
+.leftIcon-noteCard{
+    font-size: 18px;
+}
+.leftIcon-noteCard:hover{
+    color: red;
+}
+.rightIcon-noteCard{
+    font-size: 18px;
+}
+.rightIcon-noteCard:hover{
+    color: #08F5FD;
+}
