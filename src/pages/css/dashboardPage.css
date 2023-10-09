@@ -1,0 +1,43 @@
+.container-DashboardPage{
+    height: 100vh;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(180px), auto;
+}
+.box{
+    background-color: white;
+    border-radius: 25px;
+    padding: 1rem;
+}
+.Box1-DashboardPage{
+    grid-column: span 1;
+    grid-row: span 3;
+}
+.Box4-DashboardPage{
+    grid-column: span 1;
+    grid-row: span 3;
+}
+.Box7-DashboardPage{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.iconTask-DashboardPage{
+    font-size: 18px;
+}
+.center-DashboardPage{
+    text-align: center;
+}
+.inProgressDiv-DashboardPage{
+   
+    margin-top: 0.4rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100vh;
+}
+.inProgressTaskDiv-DashboardPage{
+    display: inline-block;
+    margin: 5px;
+    background-color: #f0f0f0;
+    height: 80%;
+}

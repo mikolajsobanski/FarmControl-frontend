@@ -9,7 +9,7 @@ function DisplayFarmerDetailsWorker({pk_farmer}){
     const dispatch = useDispatch()
     const farmerShortDetailsInfo = useSelector(state => state.farmerShortDetailsWorker)
     const { error: errorFarmerShortDetails, loading:loadingFarmerShortDetails, details:detailsFarmerShortDetails} = farmerShortDetailsInfo
-   console.log(pk_farmer)
+   
     useEffect ( () => {
            dispatch(farmerShortDetailsWorker(pk_farmer))
     },[dispatch, pk_farmer])

@@ -9,16 +9,25 @@ import defaultPhoto from '../assets/user-image.png'
 import axios from "axios"
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+import { useNavigate } from "react-router-dom";
+import DisplayFarmerDetailsOwner from "../components/DisplayFarmerDetailsOwner";
 
 function SettingsPage(){
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const farmerInfo = useSelector(state => state.farmerInfo)
     const { error, loading, farmer} = farmerInfo
 
     useEffect ( () => {
         dispatch(farmerDetails())
-       // setFirst_name(farmer.first_name)
-       // setLast_name(farmer.last_name)
+       
+        
+            if(farmer){
+                
+            }else{
+                navigate('/auth')
+            }
+            
     },[dispatch])
     
 
@@ -356,7 +365,7 @@ function SettingsPage(){
                     
                     {farmerInfo && farmer  ? (<>
                         {farmer.is_owner ? 'Jesteś właścicielem gospodarstwa' : <div className="prfileColDiv-settings">
-                            Pracodawca: {farmerInfo && farmer ? farmer.id_owner : ''}
+                            Pracodawca: <DisplayFarmerDetailsOwner pk_farmer={farmer.id_owner}/>
                         </div>}
                         
                     </>) : (<>

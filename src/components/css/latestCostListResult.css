@@ -1,0 +1,9 @@
+.mainDiv-LatestCostsList{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+
+.mainDiv-HealthStatusList::-webkit-scrollbar{
+    display: none;
+}

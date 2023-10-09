@@ -1,0 +1,25 @@
+.vaccinationNameRow-VaccinationResult{
+    padding: 0.4rem;
+    margin: 0.2rem;
+}
+.vaccinationNameRow-VaccinationResult:hover{
+    cursor: pointer;
+    background-color: white;
+}
+.center-VaccinationResult{
+    text-align: center;
+}
+.vaccinationHeader-VaccinationResult{
+    text-align: center;
+    padding: 0.6rem;
+}
+.vaccinationHeaderDetail-VaccinationResult{
+    text-align: center;
+    background-color: #f6f6f9;
+    padding: 0.8rem;
+    border-radius: 25px;
+}
+.mainDiv-VaccinationResultsList{
+    height: 100%;
+    overflow-y: scroll;
+}

@@ -18,7 +18,9 @@ axios.interceptors.response.use(resp => resp, async error => {
             localStorage.removeItem('access_token');
             localStorage.setItem('access_token', JSON.stringify(response.data.token))
             window.location.reload()
+            return axios.request(error.config)
         }
+        
     }
 
     refresh = false

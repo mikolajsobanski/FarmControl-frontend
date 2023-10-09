@@ -24,8 +24,21 @@
 .img-animalDiscoverCardPopup{
     display: flex;
     height: 45vh;
-    width: 24vw;
+    width: auto;
     background-size: cover; 
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
     margin: auto;
 }
+@media screen and (max-width: 700px){
+    .img-animalDiscoverCardPopup{
+     width: 100%;
+     margin: 0;
+    }
+    .bodyCard-animalDiscoverCard{
+        margin: 0;
+    }
+    .img-animalDiscoverCard{
+        width: 100%;
+        margin: 0;
+    }
+ }

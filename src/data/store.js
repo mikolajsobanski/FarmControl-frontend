@@ -4,6 +4,8 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { farmerInfoReducer, farmerLoginReducer, farmerRegisterReducer, farmerForgotReducer, farmerResetReducer, farmerUpdateEmailReducer, farmerUpdateNamesReducer, farmerUpdatePasswordReducer, farmerDeleteReducer, farmerDeleteWorkerReducer, farmerContactSupportReducer, farmerUpdatePhotoReducer, farmerWorkerListReducer, farmerRegisterWorkerReducer, farmerCoworkerListReducer, farmerShortDetailsOwnerReducer, farmerShortDetailsWorkerReducer } from './reducers/farmerReducers';
 import { commentTaskDeleteReducer, commentTaskPutReducer, noteDeleteReducer, noteGetReducer, notePostReducer, notePutReducer, taskAddCommentReducer, taskDeleteReducer, taskGetCompleteReducer, taskGetInProgressReducer, taskListCommentReducer, taskMakeCompleteReducer, taskMakeInProgressReducer, taskPostOwnReducer, taskPostWorkerReducer, taskPutReducer } from './reducers/utilsReducers';
+import { animalAddReducer, animalDeleteReducer, animalListReducer, animalPutReducer, costsAddReducer, costsCategoryListReducer, costsDeleteReducer, costsListReducer, costsPutReducer, healthAddReducer, healthDeleteReducer, healthListReducer, healthPutReducer, latestCostsListReducer, singleCostCategoryReducer, speciesListReducer, speciesSearchReducer, speciesShortReducer, vaccinationAddReducer, vaccinationDeleteReducer, vaccinationListReducer, vaccinationPutReducer } from './reducers/animalReducers';
+import { countedWorkersReducer, taskRatioReducer, totalCostAnimalByCategoryReducer, totalCostAnimalsReducer } from './reducers/analysisReducers';
 
 
 const reducer = combineReducers({
@@ -46,6 +48,38 @@ const reducer = combineReducers({
     taskListComment: taskListCommentReducer,
     taskPutComment: commentTaskPutReducer,
     taskdeleteComment: commentTaskDeleteReducer,
+
+    speciesList: speciesListReducer,
+    speciesSearch: speciesSearchReducer,
+    speciesShort: speciesShortReducer,
+
+    animalAdd: animalAddReducer,
+    animalList: animalListReducer,
+    animalDelete: animalDeleteReducer,
+    animalUpdate: animalPutReducer,
+
+    costsCategoryList: costsCategoryListReducer,
+
+    vaccinationAdd: vaccinationAddReducer,
+    vaccinationList: vaccinationListReducer,
+    vaccinationDelete: vaccinationDeleteReducer,
+    vaccinationUpdate: vaccinationPutReducer,
+
+    healthAdd: healthAddReducer,
+    healthList: healthListReducer,
+    healthDelete: healthDeleteReducer,
+    healthUpdate: healthPutReducer,
+
+    costsAdd: costsAddReducer,
+    costsList: costsListReducer,
+    costsDelete: costsDeleteReducer,
+    costsUpdate: costsPutReducer,
+    latestcostsList: latestCostsListReducer,
+
+    countedWorkers: countedWorkersReducer,
+    taskRatio: taskRatioReducer,
+    totalCostAnimals: totalCostAnimalsReducer,
+    totalCostAnimalCategory: totalCostAnimalByCategoryReducer,
 })
 
 const initialState = {

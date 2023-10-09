@@ -1,0 +1,23 @@
+.center-HealthResult{
+    text-align: center;
+    
+}
+.headerDetail-HealthResult{
+    text-align: center;
+    background-color: #f6f6f9;
+    padding: 0.8rem;
+    border-radius: 25px;
+}
+.mainName-HealthResult{
+    text-align: center;
+    padding: 0.2rem;
+    margin: 0.2rem;
+}
+.mainName-HealthResult:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.mainDiv-HealthList{
+    height: 100%;
+    overflow-y: scroll;
+}

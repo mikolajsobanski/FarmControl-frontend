@@ -3,14 +3,36 @@ import './css/myFarmPage.css'
 import AnimalHouse from '../components/AnimalHouse'
 import {RiHeartAddFill} from 'react-icons/ri'
 import {BiSolidCartAdd} from 'react-icons/bi'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import {farmerDetails} from'../data/actions/farmerActions'
+import { useNavigate } from 'react-router-dom'
+import HeathStatusList from '../components/HealthStatusList'
+import LatestCostsList from '../components/LatestCostsList'
 
 function MyFarmPage(){
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const farmerInfo = useSelector(state => state.farmerInfo)
+    const { error, loading, farmer} = farmerInfo
+
+
+
+    useEffect ( () => {
+        dispatch(farmerDetails())
+        if(farmer){
+                
+        }else{
+            navigate('/auth')
+        }
+        
+    },[dispatch])
 
     return(
         <div className="mainDivContainer-MyFarmPage">
             <Row className='mainRow-MyFarmPage'>
                 <Col md={7} className='animalsCol-MyFarmPage'>
-                    <AnimalHouse />
+                    <AnimalHouse farmer={farmer}/>
                 </Col>
 
                 <Col >
@@ -18,20 +40,27 @@ function MyFarmPage(){
                         <Row>
                             <Col>
                                 <h5>
-                                    Koszty
+                                    Ostatnie koszty
                                 </h5>
                             </Col>
                             <Col>
                                 <div className='addExpenses-MyFarmPage'>
-                                    <BiSolidCartAdd />
+                                    <h5>
+                                        Kwota
+                                    </h5>
                                 </div>
                             </Col>
+                        </Row>
+                        <Row>
+                            <div>
+                               <LatestCostsList farmer={farmer}/>
+                            </div>
                         </Row>
                         
                     </Row>
 
                     <Row className='healthRow-MyFarmPage'>
-                    <Row>
+                        <Row className='healthTitleRow-MyFarmPage'>
                             <Col>
                                 <h5>
                                     zdrowie
@@ -43,6 +72,14 @@ function MyFarmPage(){
                                 </div>
                             </Col>
                         </Row>
+
+                        <Row>
+                        <div>
+                            <HeathStatusList farmer={farmer}/>
+                        </div>
+                        </Row>
+
+                        
                     </Row>
                 </Col>
             </Row>
