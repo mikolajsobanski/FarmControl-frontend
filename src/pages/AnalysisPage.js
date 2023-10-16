@@ -11,12 +11,15 @@ import TaskRatioPie from '../components/charts/TaskRatioPie'
 import AnimalCostsBar from '../components/charts/AnimalCostsBar'
 import WorkerCountBar from '../components/charts/WorkerCountBar'
 import { CountedWorkers, TaskRatio, TotalCostAnimals } from '../data/actions/analysisActions'
+import FullRaportsHome from '../components/FullRaportsHome'
+import MonthlyRaportsHome from '../components/MonthlyRaportsHome'
 function AnalysisPage(){
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const farmerInfo = useSelector(state => state.farmerInfo)
     const { error, loading, farmer} = farmerInfo
+    const farmerId = farmer?.id;
     
 
     useEffect ( () => {
@@ -56,15 +59,15 @@ function AnalysisPage(){
         <div className="mainDiv-AnalysisPage">
             <div className='analysisHeader-AnalysisPage'><span className='analysisIcon-AnalysisPage'><IoAnalytics /></span> Analiza</div>
             <Row className='analysisRow-AnalysisPage'>
-                <Col>
-                <WorkerCountBar countedWorkers={countedworkers}/>
+                <Col md={4}>
+                    <WorkerCountBar countedWorkers={countedworkers}/>
                 </Col>
 
-                <Col className='taskRatioCol-AnalysisPage'>
+                <Col className='taskRatioCol-AnalysisPage' md={4}>
                     <TaskRatioPie inProgres={inProgres} complete={complete}/>
                 </Col>
 
-                <Col>
+                <Col md={4}>
                     <AnimalCostsBar data={totalCosts}/>
                 </Col>
             </Row>
@@ -73,9 +76,15 @@ function AnalysisPage(){
                 <div className='reportsHeader-AnalysisPage'><span className='reportsIcon-AnalysisPage'><TbReportAnalytics /></span> Raporty</div>
                 <Col className='fullReportCol-AnalysisPage'>
                 <div className='reportsColumnHeader-AnalysisPage'>Pełen raport</div>
+                <div className='fullRaportsDiv-AnalysisPage'>
+                    <FullRaportsHome farmerId={farmerId} />
+                </div>
                 </Col>
                 <Col className='monthlyReportCol-AnalysisPage'>
                 <div className='reportsColumnHeader-AnalysisPage'>Miesięczny raport</div>
+                <div className='fullRaportsDiv-AnalysisPage'>
+                    <MonthlyRaportsHome farmerId={farmerId} />
+                </div>
                 </Col>
             </Row>
         </div>

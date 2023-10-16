@@ -4,19 +4,19 @@ import './css/dashboardPage.css'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { farmerDetails, farmerWorkerList } from '../data/actions/farmerActions'
-import { CountedWorkers, TaskRatio, TotalCostAnimals } from '../data/actions/analysisActions'
+import { CountedWorkers, HealthRatio, TaskRatio, TotalCostAnimals, TotalCostByCategory, TotalCostsMonth } from '../data/actions/analysisActions'
 import TaskRatioPie from '../components/charts/TaskRatioPie'
 import { Button, Carousel, Col, Row } from 'react-bootstrap'
 import {GrInProgress} from "react-icons/gr"
 import {IoCheckmarkDoneSharp} from "react-icons/io5"
 import WorkerCard from '../components/WorkerCard'
-import SumOgAllCostArea from '../components/charts/SumOfAllCostArea'
+import SumOfAllCostArea from '../components/charts/SumOfAllCostArea'
 import HealthStatusPie from '../components/charts/HealthStatusPie'
 import Popup from '../components/Popup'
 import TaskCard from '../components/TaskCard'
 import { ListCompleteTask, ListInProgressTask } from '../data/actions/utilsActions'
-import SumOfAllEachCategoryCostsPie from '../components/charts/SumOfAllEachCategoryCostsPie'
 import AnimalCostRadar from '../components/charts/AnimalCostRadar'
+import CostCategoryAnimalVerticalBar from '../components/charts/CostCategoryAnimalVerticalBar'
 
 function DashboardPage(){
     const dispatch = useDispatch()
@@ -39,10 +39,16 @@ function DashboardPage(){
                     dispatch(TotalCostAnimals(farmer.id))
                     dispatch(ListInProgressTask(farmer.id))
                     dispatch(ListCompleteTask(farmer.id))
+                    dispatch(HealthRatio(farmer.id))
+                    dispatch(TotalCostByCategory(farmer.id))
+                    dispatch(TotalCostsMonth(farmer.id))
                 }else{
                     dispatch(CountedWorkers(farmer.id_owner))
                     dispatch(TaskRatio(farmer.id_owner))
                     dispatch(TotalCostAnimals(farmer.id_owner))
+                    dispatch(HealthRatio(farmer.id_owner))
+                    dispatch(TotalCostByCategory(farmer.id_owner))
+                    dispatch(TotalCostsMonth(farmer.id_owner))
                     dispatch(ListInProgressTask(farmer.id))
                     dispatch(ListCompleteTask(farmer.id))
                 }
@@ -61,6 +67,10 @@ function DashboardPage(){
     //task ratio
     const TaskRatioo = useSelector(state => state.taskRatio)
     const { error:errortaskRatio, loading: loadingtaskRatio, inProgres, complete} = TaskRatioo
+
+     //health ratio
+     const healthRatio = useSelector(state => state.healthRatio)
+     const { error:errorhealthRatio, loading: loadinghealthRatio, healthy, ill} = healthRatio
 
     //totalCostAnimal
     const totalCostAnimals = useSelector(state => state.totalCostAnimals)
@@ -81,6 +91,13 @@ function DashboardPage(){
     const workersList = useSelector(state => state.farmerWorkerList)
     const { workers, loading:loadingWorkers, error:errorWorkers} = workersList
 
+    //totalCostCategory
+    const totalCostCategory = useSelector(state => state.totalCostCategory)
+    const { error:errortotalCostCategory, loading: loadingtotalCostCategory, costsByCategory} = totalCostCategory
+    
+    //totalCostsMonths
+    const totalCostMonths = useSelector(state => state.totalCostMonths)
+    const { error:errortotalCostMonths, loading: loadingtotalCostMonths, monthly_costs} = totalCostMonths
     
 
     return(
@@ -112,26 +129,18 @@ function DashboardPage(){
                 </div>
             </Popup>
             <div className="box Box1-DashboardPage">
-                <p>Lista pracowników</p>
-                <Carousel>
-                        {workers && workers.map(worker => (
-                        <Carousel.Item key={worker.id} sm={12} md={6} lg={4} xl={3}>
-                            <WorkerCard farmer={worker} farmerId={farmerId}/>
-                        </Carousel.Item>
-                        ))}
-                </Carousel>
-               
+                <CostCategoryAnimalVerticalBar data={costsByCategory} />
             </div>
             <div className="box Box2-DashboardPage">
-                <AnimalCostRadar />
+                <AnimalCostRadar data={totalCosts}/>
             </div>
             <div className="box Box3-DashboardPage">
                 
-                <HealthStatusPie />
+                <HealthStatusPie healthy={healthy} ill={ill}/>
                 </div>
             <div className="box Box4-DashboardPage">
-                <h5 className='center-DashboardPage'>Suma wydatków Kategoria</h5>
-                <SumOfAllEachCategoryCostsPie />
+                
+                <AnimalCostsBar data={totalCosts} />
             </div>
             <div className="box Box5-DashboardPage">
                 <p>Ilość zadań w trakcie: {inProgres}</p>
@@ -161,12 +170,23 @@ function DashboardPage(){
                 </Row>
             </div>
             <div className="box Box7-DashboardPage">
-                <h5 className='center-DashboardPage'>Suma wydatków Zwierzę</h5>
-                <AnimalCostsBar data={totalCosts}/>
+            <SumOfAllCostArea data={monthly_costs}/>
+                
             </div>
-            <div className="box Box8-DashboardPage"><TaskRatioPie inProgres={inProgres} complete={complete}/></div>
+            <div className="box Box8-DashboardPage">
+            
+            <p>Lista pracowników</p>
+                <Carousel>
+                        {workers && workers.map(worker => (
+                        <Carousel.Item key={worker.id} sm={12} md={6} lg={4} xl={3}>
+                            <WorkerCard farmer={worker} farmerId={farmerId}/>
+                        </Carousel.Item>
+                        ))}
+                </Carousel>
+                
+            </div>
             <div className="box Box9-DashboardPage">
-                <SumOgAllCostArea />
+                <TaskRatioPie inProgres={inProgres} complete={complete}/>
             </div>
         
 

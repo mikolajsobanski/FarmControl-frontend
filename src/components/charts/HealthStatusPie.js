@@ -3,10 +3,7 @@ import React, { PureComponent } from 'react';
 import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from 'recharts';
 
 const RADIAN = Math.PI / 180;
-const data = [
-  { name: 'Chory', value: 80, color: '#ff0000' },
-  { name: 'Zdrowy', value: 45, color: '#00ff00' },
-];
+
 const cx = 100;
 const cy = 80;
 const iR = 40;
@@ -38,11 +35,15 @@ const needle = (value, data, cx, cy, iR, oR, color) => {
   ];
 };
 
-function HealthStatusPie(){
+function HealthStatusPie({healthy, ill}){
+  const data = [
+    { name: `${ill} Chory`, value: ill, color: '#ff0000' },
+    { name: `${healthy} Zdrowy`, value: healthy, color: '#00ff00' },
+  ];
 
     return (
         <ResponsiveContainer width="100%" height="100%">
-        <PieChart width={200} height={150}>
+        <PieChart width={200} height={200}>
                 <Pie
                 dataKey="value"
                 startAngle={180}

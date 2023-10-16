@@ -12,16 +12,17 @@
 }
 .Box1-DashboardPage{
     grid-column: span 1;
-    grid-row: span 3;
+    grid-row: span 2;
 }
 .Box4-DashboardPage{
     grid-column: span 1;
-    grid-row: span 3;
+    grid-row: span 2;
 }
 .Box7-DashboardPage{
     grid-column: span 2;
-    grid-row: span 2;
+    grid-row: span 1;
 }
+
 .iconTask-DashboardPage{
     font-size: 18px;
 }
@@ -40,4 +41,15 @@
     margin: 5px;
     background-color: #f0f0f0;
     height: 80%;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 700px){
+    .container-DashboardPage{
+        height: auto;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .Box7-DashboardPage{
+        grid-column: span 2;
+        grid-row: span 1;
+    }
 }

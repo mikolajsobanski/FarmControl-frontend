@@ -49,8 +49,8 @@ function SideIcons() {
             <LinkContainer to='/farm'>
                 <Nav.Link className={'/farm' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/farm')}> <span className='icon-sidebar'><BiHome/></span></Nav.Link>
             </LinkContainer>
-            <LinkContainer to='/add'>
-                <Nav.Link className={'/add' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/add')}><span className='icon-sidebar'><LuLayoutDashboard/></span></Nav.Link>
+            <LinkContainer to='/dashboard'>
+                <Nav.Link className={'/dashboard' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/dashboard')}><span className='icon-sidebar'><LuLayoutDashboard/></span></Nav.Link>
             </LinkContainer>
             <LinkContainer to='/staff'>
                 <Nav.Link className={'/staff' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/staff')}><span className='icon-sidebar'><IoPeopleOutline/></span></Nav.Link>

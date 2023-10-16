@@ -14,7 +14,7 @@ function LatestCostsList({farmer}){
   
     useEffect(() =>{
         
-        dispatch(ListLatestCosts(farmer.id))
+        dispatch(ListLatestCosts(farmer))
         
       },[dispatch])
     return(

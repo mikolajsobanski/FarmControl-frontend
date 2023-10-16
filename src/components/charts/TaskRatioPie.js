@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { PieChart, Pie, Cell, Legend } from "recharts";
+import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from "recharts";
 
 
 const COLORS = ['#0088FE', '#00C49F',];
@@ -39,26 +39,28 @@ function TaskRatioPie({inProgres, complete}){
       ];
 
     return(
-        <div>
-            
-            <PieChart width={250} height={250}>
-                <Pie
-                    data={data}
-                    cx={100}
-                    cy={100}
-                    labelLine={false}
-                    label={renderCustomizedLabel}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    dataKey="value"
-                >
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart width={400} height={400}>
+          <Pie
+            data={data}
+            cx="50%"
+            cy="50%"
+            labelLine={false}
+            label={renderCustomizedLabel}
+            outerRadius={80}
+            fill="#8884d8"
+            dataKey="value"
+          >
                     {data.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                 </Pie>
                 <Legend />
             </PieChart>
-        </div>
+      </ResponsiveContainer>
+            
+            
+        
     )
 }
 export default TaskRatioPie

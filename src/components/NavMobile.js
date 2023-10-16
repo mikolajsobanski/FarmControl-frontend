@@ -16,7 +16,7 @@ function NavMobile () {
                 <Col>
                     <div className="items-navMobile">
                     <Link className="item-navMobile" to={"/farm"}><BiHome/></Link>
-                    <Link className="item-navMobile" to={"/"}><LuLayoutDashboard/></Link>
+                    <Link className="item-navMobile" to={"/dashboard"}><LuLayoutDashboard/></Link>
                     <Link className="item-navMobile" to={"/staff"}><IoPeopleOutline/></Link>
                     <Link className="item-navMobile" to={"/analysis"}><IoAnalytics/></Link>
                     <Link className="item-navMobile" to={"/settings"}><IoSettingsOutline/></Link>

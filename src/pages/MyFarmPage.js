@@ -15,7 +15,7 @@ function MyFarmPage(){
     const dispatch = useDispatch()
     const farmerInfo = useSelector(state => state.farmerInfo)
     const { error, loading, farmer} = farmerInfo
-
+    const farmerId = farmer?.id;
 
 
     useEffect ( () => {
@@ -53,7 +53,7 @@ function MyFarmPage(){
                         </Row>
                         <Row>
                             <div>
-                               <LatestCostsList farmer={farmer}/>
+                               <LatestCostsList farmer={farmerId}/>
                             </div>
                         </Row>
                         

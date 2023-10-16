@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 const colors = ['#08F5FD'];
 
@@ -29,8 +29,8 @@ function WorkerCountBar({countedWorkers}){
       ];
 
     return(
-        <div>
-            <BarChart
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart
             width={350}
             height={300}
             data={data}
@@ -50,7 +50,9 @@ function WorkerCountBar({countedWorkers}){
                 ))}
             </Bar>
             </BarChart>
-        </div>
+        </ResponsiveContainer>
+            
+        
     )
 }
 export default WorkerCountBar

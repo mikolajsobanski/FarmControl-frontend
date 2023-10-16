@@ -1,8 +1,9 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { TotalCostAnimalByCategory } from "../data/actions/analysisActions"
-import CostCategoryAnimalPie from "./charts/CostCategoryAnimalPie"
+
 import './css/animalCard.css'
+import CostCategoryAnimalPie from "./charts/CostCategoryAnimalPie"
 
 
 function AnimalCardAnalysis({animalId}){
@@ -17,7 +18,7 @@ function AnimalCardAnalysis({animalId}){
 
     return(
         <div className="mainDiv-AnimalCardAnalysis">
-            <CostCategoryAnimalPie data={costByCategory}/>
+            <CostCategoryAnimalPie data={costByCategory} />
         </div>
     )
 }
