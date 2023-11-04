@@ -3,7 +3,9 @@
     overflow-y: scroll;
 }
 
-
+.mainDiv-LatestCostsList::-webkit-scrollbar{
+    display: none;
+}
 .mainDiv-HealthStatusList::-webkit-scrollbar{
     display: none;
 }

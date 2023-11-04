@@ -1,5 +1,8 @@
 .mainDiv-AnalysisPage{
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .reportsHeader-AnalysisPage{
     text-align: center;
@@ -25,6 +28,7 @@
 }
 .reportsRow-AnalysisPage{
     margin: 1rem;
+    width: 100%;
 }
 .fullReportCol-AnalysisPage{
     background-color: white;
@@ -35,7 +39,6 @@
     background-color: white;
     border-radius: 25px;
     padding: 0.6rem;
-    height: 35vh;
     margin-left: 1rem;
 }
 .reportsColumnHeader-AnalysisPage{
@@ -56,5 +59,11 @@
     }
     .analysisRow-AnalysisPage{
      height: auto;
+     width: 90vw;
+    }
+    .monthlyReportCol-AnalysisPage{
+        margin: 0;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
     }
  }

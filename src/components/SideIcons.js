@@ -56,10 +56,13 @@ function SideIcons() {
                 <Nav.Link className={'/staff' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/staff')}><span className='icon-sidebar'><IoPeopleOutline/></span></Nav.Link>
             </LinkContainer>
             <LinkContainer to='/analysis'>
-                <Nav.Link className={'/analysis' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/analysis')}><span className='icon-sidebar'><IoAnalytics/></span></Nav.Link>
+                <Nav.Link className={'/analysis' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/analysis')}><span className='icon-sidebar'><TbReportAnalytics/></span></Nav.Link>
             </LinkContainer>
             <LinkContainer to='/settings'>
                 <Nav.Link className={'/settings' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/settings')}><span className='icon-sidebar'><IoSettingsOutline/></span></Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/help'>
+                <Nav.Link className={'/help' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/help')}><span className='icon-sidebar'><TbHelpCircle/></span></Nav.Link>
             </LinkContainer>
             
             {farmer && farmer.first_name ? (<>

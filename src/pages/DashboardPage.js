@@ -17,6 +17,7 @@ import TaskCard from '../components/TaskCard'
 import { ListCompleteTask, ListInProgressTask } from '../data/actions/utilsActions'
 import AnimalCostRadar from '../components/charts/AnimalCostRadar'
 import CostCategoryAnimalVerticalBar from '../components/charts/CostCategoryAnimalVerticalBar'
+import WorkerCountBar from '../components/charts/WorkerCountBar'
 
 function DashboardPage(){
     const dispatch = useDispatch()
@@ -132,7 +133,7 @@ function DashboardPage(){
                 <CostCategoryAnimalVerticalBar data={costsByCategory} />
             </div>
             <div className="box Box2-DashboardPage">
-                <AnimalCostRadar data={totalCosts}/>
+                <WorkerCountBar  countedWorkers={countedworkers}/>
             </div>
             <div className="box Box3-DashboardPage">
                 

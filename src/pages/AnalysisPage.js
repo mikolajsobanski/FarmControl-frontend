@@ -57,20 +57,7 @@ function AnalysisPage(){
 
     return(
         <div className="mainDiv-AnalysisPage">
-            <div className='analysisHeader-AnalysisPage'><span className='analysisIcon-AnalysisPage'><IoAnalytics /></span> Analiza</div>
-            <Row className='analysisRow-AnalysisPage'>
-                <Col md={4}>
-                    <WorkerCountBar countedWorkers={countedworkers}/>
-                </Col>
-
-                <Col className='taskRatioCol-AnalysisPage' md={4}>
-                    <TaskRatioPie inProgres={inProgres} complete={complete}/>
-                </Col>
-
-                <Col md={4}>
-                    <AnimalCostsBar data={totalCosts}/>
-                </Col>
-            </Row>
+           
 
             <Row className='reportsRow-AnalysisPage'>
                 <div className='reportsHeader-AnalysisPage'><span className='reportsIcon-AnalysisPage'><TbReportAnalytics /></span> Raporty</div>

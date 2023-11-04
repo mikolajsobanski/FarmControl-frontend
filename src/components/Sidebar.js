@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import {farmerDetails, logout} from'../data/actions/farmerActions'
 import Nav from 'react-bootstrap/Nav';
 import { LinkContainer } from 'react-router-bootstrap'
-import { IoAnalytics, IoSettingsOutline, IoPeopleOutline, IoClose, IoLogOutOutline, IoLogInOutline } from 'react-icons/io5'
+import { IoSettingsOutline, IoPeopleOutline, IoClose, IoLogOutOutline, IoLogInOutline } from 'react-icons/io5'
 import { TbReportAnalytics, TbHelpCircle } from 'react-icons/tb'
 import { LuLayoutDashboard } from 'react-icons/lu'
 import { BiHome } from 'react-icons/bi'
@@ -56,10 +56,13 @@ function Sidebar() {
                 <Nav.Link className={'/staff' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/staff')}><span className='icon-sidebar'><IoPeopleOutline/></span> Pracownicy</Nav.Link>
             </LinkContainer>
             <LinkContainer to='/analysis'>
-                <Nav.Link className={'/analysis' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/analysis')}><span className='icon-sidebar'><IoAnalytics/></span> Analiza</Nav.Link>
+                <Nav.Link className={'/analysis' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/analysis')}><span className='icon-sidebar'><TbReportAnalytics/></span> Raporty</Nav.Link>
             </LinkContainer>
             <LinkContainer to='/settings'>
                 <Nav.Link className={'/settings' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/settings')}><span className='icon-sidebar'><IoSettingsOutline/></span> Ustawienia</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/help'>
+                <Nav.Link className={'/help' === activeLink ? 'active-sidebar' : 'button-sidebar'} onClick={() => handleLinkClick('/help')}><span className='icon-sidebar'><TbHelpCircle/></span> Pomoc</Nav.Link>
             </LinkContainer>
             {farmer && farmer.first_name ? (<>
                 <LinkContainer to='/'>

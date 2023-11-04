@@ -1,0 +1,26 @@
+.mainDiv-HelpPage{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.helpRow-HelpPage{
+    background-color: white;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border-radius: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.formEmailContact-HelpPage{
+    margin-bottom: 1rem;
+}
+.buttonEmailContact-HelpPage{
+    height: 5vh;
+    margin-top: 1rem;
+}
+.contactButton-HelpPage{
+    margin: 0.4rem;
+}
