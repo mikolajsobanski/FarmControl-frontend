@@ -47,3 +47,6 @@
 .mainDiv-HealthStatusList::-webkit-scrollbar{
     display: none;
 }
+.statusHealthHeader-healthStatusListResult{
+    margin-top: 4rem;
+}

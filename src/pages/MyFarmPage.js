@@ -9,6 +9,7 @@ import {farmerDetails} from'../data/actions/farmerActions'
 import { useNavigate } from 'react-router-dom'
 import HeathStatusList from '../components/HealthStatusList'
 import LatestCostsList from '../components/LatestCostsList'
+import FilterPanel from '../components/filterAnimals/FilterPanel'
 
 function MyFarmPage(){
     const navigate = useNavigate()
@@ -37,6 +38,11 @@ function MyFarmPage(){
 
                 <Col >
                     <Row className='expensesRow-MyFarmPage'>
+                       <FilterPanel farmerId={farmerId}/>
+                        
+                    </Row>
+
+                    <Row className='expensesRow-MyFarmPage'>
                         <Row>
                             <Col>
                                 <h5>
@@ -56,29 +62,6 @@ function MyFarmPage(){
                                <LatestCostsList farmer={farmerId}/>
                             </div>
                         </Row>
-                        
-                    </Row>
-
-                    <Row className='healthRow-MyFarmPage'>
-                        <Row className='healthTitleRow-MyFarmPage'>
-                            <Col>
-                                <h5>
-                                    zdrowie
-                                </h5>
-                            </Col>
-                            <Col>
-                                <div className='addHealth-MyFarmPage'>
-                                    <RiHeartAddFill />
-                                </div>
-                            </Col>
-                        </Row>
-
-                        <Row>
-                        <div>
-                            <HeathStatusList farmer={farmer}/>
-                        </div>
-                        </Row>
-
                         
                     </Row>
                 </Col>

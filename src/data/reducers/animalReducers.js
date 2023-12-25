@@ -87,6 +87,14 @@ import {
     LATEST_COSTS_GET_REQUEST,
     LATEST_COSTS_GET_SUCCESS,
     LATEST_COSTS_GET_FAIL,
+
+    FARMER_ANIMAL_SPECIES_GET_REQUEST,
+    FARMER_ANIMAL_SPECIES_GET_SUCCESS,
+    FARMER_ANIMAL_SPECIES_GET_FAIL,
+
+    FARMER_ANIMAL_SPECIES_RESULT_GET_REQUEST,
+    FARMER_ANIMAL_SPECIES_RESULT_GET_SUCCESS,
+    FARMER_ANIMAL_SPECIES_RESULT_GET_FAIL,
 } from '../constants/animalConstants'
 
 export const speciesListReducer = (state = {}, action) => {
@@ -423,6 +431,38 @@ export const latestCostsListReducer = (state = {}, action) => {
             return { loading: false, latestcosts: action.payload }
 
         case LATEST_COSTS_GET_FAIL:
+            return { loading: false, error: action.payload }
+        
+        default:
+            return state
+    }
+}
+
+export const farmerAnimalSpeciesListReducer = (state = {}, action) => {
+    switch (action.type) {
+        case FARMER_ANIMAL_SPECIES_GET_REQUEST:
+            return { loading: true }
+
+        case FARMER_ANIMAL_SPECIES_GET_SUCCESS:
+            return { loading: false, farmerAnimalspecies: action.payload }
+
+        case FARMER_ANIMAL_SPECIES_GET_FAIL:
+            return { loading: false, error: action.payload }
+        
+        default:
+            return state
+    }
+}
+
+export const farmerAnimalSpeciesResultListReducer = (state = {}, action) => {
+    switch (action.type) {
+        case FARMER_ANIMAL_SPECIES_RESULT_GET_REQUEST:
+            return { loading: true }
+
+        case FARMER_ANIMAL_SPECIES_RESULT_GET_SUCCESS:
+            return { loading: false, farmerAnimalspeciesresult: action.payload }
+
+        case FARMER_ANIMAL_SPECIES_RESULT_GET_FAIL:
             return { loading: false, error: action.payload }
         
         default:

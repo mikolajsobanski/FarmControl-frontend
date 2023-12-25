@@ -4,7 +4,7 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { farmerInfoReducer, farmerLoginReducer, farmerRegisterReducer, farmerForgotReducer, farmerResetReducer, farmerUpdateEmailReducer, farmerUpdateNamesReducer, farmerUpdatePasswordReducer, farmerDeleteReducer, farmerDeleteWorkerReducer, farmerContactSupportReducer, farmerUpdatePhotoReducer, farmerWorkerListReducer, farmerRegisterWorkerReducer, farmerCoworkerListReducer, farmerShortDetailsOwnerReducer, farmerShortDetailsWorkerReducer } from './reducers/farmerReducers';
 import { commentTaskDeleteReducer, commentTaskPutReducer, noteDeleteReducer, noteGetReducer, notePostReducer, notePutReducer, taskAddCommentReducer, taskDeleteReducer, taskGetCompleteReducer, taskGetInProgressReducer, taskListCommentReducer, taskMakeCompleteReducer, taskMakeInProgressReducer, taskPostOwnReducer, taskPostWorkerReducer, taskPutReducer } from './reducers/utilsReducers';
-import { animalAddReducer, animalDeleteReducer, animalListReducer, animalPutReducer, costsAddReducer, costsCategoryListReducer, costsDeleteReducer, costsListReducer, costsPutReducer, healthAddReducer, healthDeleteReducer, healthListReducer, healthPutReducer, latestCostsListReducer, singleCostCategoryReducer, speciesListReducer, speciesSearchReducer, speciesShortReducer, vaccinationAddReducer, vaccinationDeleteReducer, vaccinationListReducer, vaccinationPutReducer } from './reducers/animalReducers';
+import { animalAddReducer, animalDeleteReducer, animalListReducer, animalPutReducer, costsAddReducer, costsCategoryListReducer, costsDeleteReducer, costsListReducer, costsPutReducer, farmerAnimalSpeciesListReducer, farmerAnimalSpeciesResultListReducer, healthAddReducer, healthDeleteReducer, healthListReducer, healthPutReducer, latestCostsListReducer, singleCostCategoryReducer, speciesListReducer, speciesSearchReducer, speciesShortReducer, vaccinationAddReducer, vaccinationDeleteReducer, vaccinationListReducer, vaccinationPutReducer } from './reducers/animalReducers';
 import { countedWorkersReducer, healthRatioReducer, taskRatioReducer, totalCostAnimalByCategoryReducer, totalCostAnimalsReducer, totalCostByCategoryReducer, totalCostMonthReducer } from './reducers/analysisReducers';
 
 
@@ -83,6 +83,9 @@ const reducer = combineReducers({
     totalCostAnimalCategory: totalCostAnimalByCategoryReducer,
     totalCostCategory: totalCostByCategoryReducer,
     totalCostMonths: totalCostMonthReducer,
+
+    farmerAnimalSpecies: farmerAnimalSpeciesListReducer,
+    farmerAnimalSpeciesResult: farmerAnimalSpeciesResultListReducer,
 })
 
 const initialState = {

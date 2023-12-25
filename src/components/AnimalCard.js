@@ -180,10 +180,14 @@ function AnimalCard({animal, categories}){
                         
                     </Row>
 
+                    {Array.isArray(animal.animal_costs) && animal.animal_costs.length === 0 ? (<>
+                    
+                    </>):(<>
                     <Row className="pieChartRow-AnimalCard">
                         <h5 className="center-AnimalCard">Suma kosztów po kategorii</h5>
                         <AnimalCardAnalysis animalId={animal.id}/>
                     </Row>
+                    </>)}
                     
                     <Row>
                         <h4 className="animalNameRow-AnimalCard">Opis rasy</h4>

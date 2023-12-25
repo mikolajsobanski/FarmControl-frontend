@@ -1,8 +1,6 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import {
   ComposedChart,
-  Line,
-  Area,
   Bar,
   XAxis,
   YAxis,
@@ -13,8 +11,6 @@ import {
 } from 'recharts';
 
 function CostCategoryAnimalVerticalBar({data}){
-
-  
 
     return (
             <ResponsiveContainer width="100%" height="100%">

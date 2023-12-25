@@ -87,6 +87,14 @@ import {
     LATEST_COSTS_GET_REQUEST,
     LATEST_COSTS_GET_SUCCESS,
     LATEST_COSTS_GET_FAIL,
+
+    FARMER_ANIMAL_SPECIES_GET_REQUEST,
+    FARMER_ANIMAL_SPECIES_GET_SUCCESS,
+    FARMER_ANIMAL_SPECIES_GET_FAIL,
+
+    FARMER_ANIMAL_SPECIES_RESULT_GET_REQUEST,
+    FARMER_ANIMAL_SPECIES_RESULT_GET_SUCCESS,
+    FARMER_ANIMAL_SPECIES_RESULT_GET_FAIL,
 } from '../constants/animalConstants'
 
 export const ListSpecies = () => async (dispatch) => {
@@ -588,6 +596,57 @@ export const updateCosts = (pk_cost, name, amount, category) => async (dispatch)
     }catch(error){
         dispatch({
             type:COSTS_UPDATE_FAIL,
+            payload:error.response && error.response.data.detail
+                ? error.response.data.detail
+                : error.message,
+        })
+    }
+}
+
+export const FarmerAnimalSpecies = (pk) => async (dispatch) => {
+    try{
+        dispatch({
+            type: FARMER_ANIMAL_SPECIES_GET_REQUEST,
+        })
+       
+        const response= await axios.get('core/animals/animalSpecies', {params: {
+            pk: pk,
+          },})
+            
+        dispatch({
+            type:FARMER_ANIMAL_SPECIES_GET_SUCCESS,
+            payload: response.data
+        })
+
+    }catch(error){
+        dispatch({
+            type:FARMER_ANIMAL_SPECIES_GET_FAIL,
+            payload:error.response && error.response.data.detail
+                ? error.response.data.detail
+                : error.message,
+        })
+    }
+}
+
+export const FarmerAnimalSpeciesResult = (pk, species) => async (dispatch) => {
+    try{
+        dispatch({
+            type: FARMER_ANIMAL_SPECIES_RESULT_GET_REQUEST,
+        })
+       
+        const response= await axios.get('core/animals/animalSpeciesResult', {params: {
+            pk: pk,
+            species: species,
+          },})
+            
+        dispatch({
+            type:FARMER_ANIMAL_SPECIES_RESULT_GET_SUCCESS,
+            payload: response.data
+        })
+
+    }catch(error){
+        dispatch({
+            type:FARMER_ANIMAL_SPECIES_RESULT_GET_FAIL,
             payload:error.response && error.response.data.detail
                 ? error.response.data.detail
                 : error.message,
