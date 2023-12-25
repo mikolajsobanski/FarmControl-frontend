@@ -7,3 +7,13 @@
     height: 62vh;
     margin-top: 3rem;
 }
+.myFarm-AnimalHouse{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 72vh;
+}
+.addNewAnimalButton-AnimalHouse{
+    position: absolute;
+    bottom: 0;
+}

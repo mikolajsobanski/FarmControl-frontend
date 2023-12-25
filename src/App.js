@@ -11,6 +11,8 @@ import SideIcons from './components/SideIcons';
 import StaffPage from './pages/StaffPage';
 import MyFarmPage from './pages/MyFarmPage';
 import AnalysisPage from './pages/AnalysisPage';
+import DashboardPage from './pages/DashboardPage';
+import HelpPage from './pages/HelpPage';
 
 
 
@@ -31,9 +33,11 @@ function App() {
           <Route path="/" element={<HomePage/>}/>
           <Route path="/auth" element={<AuthPage />}/>
           <Route path='/farm' element={<MyFarmPage />}/>
+          <Route path='/dashboard' element={<DashboardPage />}/>
           <Route path='/analysis' element={<AnalysisPage />}/>
           <Route path="/settings" element={<SettingsPage />}/>
           <Route path="/staff" element={<StaffPage />}/>
+          <Route path="/help" element={<HelpPage />}/>
           <Route path="/reset/:token" element={<ResetPage />}/>
         </Routes>
       </main>

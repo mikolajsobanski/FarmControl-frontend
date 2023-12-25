@@ -1,11 +1,14 @@
 .mainDiv-settings{
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .row-settings{
     width: 100%;
     margin: auto;
-    
+    height: 65vh;
 }
 
 .profileCol-settings{
@@ -42,24 +45,7 @@
     padding: 0.6rem;
 }
 
-.helpRow-settings{
-    background-color: white;
-    padding: 1rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    border-radius: 25px;
-    text-align: center;
-    
-}
 
-.formEmailContact-settings{
-    height: 2vh;
-    margin-bottom: 0.4rem;
-}
-.buttonEmailContact-settings{
-    height: 5vh;
-    margin-top: 0.4rem;
-}
 
 
 
@@ -96,6 +82,7 @@
     .helpRow-settings{
         margin: 0;
         padding: 0;
+        padding-bottom: 6rem;
     }
 }
 

@@ -1,0 +1,13 @@
+.resultRow-SearchResults{
+    font-size: 18px;
+    padding: 0.4rem;
+}
+.resultRow-SearchResults:hover{
+    background-color: #f6f6f9;
+    cursor: pointer;
+}
+.resultImg-SearchResults{
+    height: 36px;
+    width: 56px;
+    float: left;
+}

@@ -12,6 +12,7 @@ import Message from "../components/Message";
 import NoteCard from "../components/NoteCard";
 import { ListCompleteTask, ListInProgressTask, addNote, addOwnTask, listNotes } from "../data/actions/utilsActions";
 import TaskCard from "../components/TaskCard";
+import { useNavigate } from "react-router-dom";
 
 function StaffPage(){
     const dispatch = useDispatch()
@@ -37,7 +38,13 @@ function StaffPage(){
     const farmerId = farmer?.id;
     const farmerIsOwner = farmer?.is_owner
 
+    const navigate = useNavigate()
     useEffect(() => {
+        if(farmer){
+                
+        }else{
+            navigate('/auth')
+        }
         
         if(farmerIsOwner===true){
             dispatch(farmerWorkerList(farmerId))

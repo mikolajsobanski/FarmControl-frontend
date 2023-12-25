@@ -1,0 +1,51 @@
+.animalNameRow-AnimalCard{
+    padding: 2rem;
+    text-align: center;
+}
+.center-AnimalCard{
+    text-align: center;
+}
+.centerButton-AnimalCard{
+    display: flex;
+    margin: auto;
+}
+.animalImage-AnimalCard{
+    display: flex;
+    margin: auto;
+    height: 60vh;
+    width: auto;
+}
+.deleteIcon-AnimalCard{
+    float: right;
+}
+.deleteIcon-AnimalCard:hover{
+    cursor: pointer;
+    color: red;
+    
+}
+.editIcon-AnimalCard:hover{
+    cursor: pointer;
+    color: yellowgreen;
+    
+}
+.listOfCostsRow-AnimalCard{
+    background-color: #f6f6f9;
+    padding: 2rem;
+    border-radius: 25px;
+    margin: 1rem;
+    height: 30vh;
+    
+}
+.pieChartRow-AnimalCard{
+   margin: 0;
+   margin-top: 2rem;
+}
+.addCostButton-AnimalCard{
+    width: 30vw;
+    margin: auto;
+    justify-content: center;
+}
+.mainDiv-AnimalCardAnalysis{
+    width: auto;
+    margin: auto;
+}

@@ -18,6 +18,10 @@
     border-radius: 25px;
     margin: 1rem;
     padding: 1.5rem;
+    overflow-y: scroll;
+}
+.expensesRow-MyFarmPage::-webkit-scrollbar{
+    display: none;
 }
 .healthRow-MyFarmPage{
     height: 46vh;
@@ -42,3 +46,16 @@
     color: red;
     cursor: pointer;
 }
+@media screen and (max-width: 700px){
+    .animalsCol-MyFarmPage{
+        margin: 0.5rem;
+        
+    }
+    .mainDivContainer-MyFarmPage{
+        width: 100%;
+        height: auto;
+    }
+    .healthRow-MyFarmPage{
+        margin-bottom: 4rem;
+    }
+ }

@@ -3,7 +3,7 @@ import './css/animalDiscoverCard.css'
 import Popup from "./Popup";
 import { useState } from "react";
 
-function AnimalDiscoverCard(){
+function AnimalDiscoverCard({species}){
     const [popupFullCard, setPopupFullCard] = useState('')
     
         
@@ -14,33 +14,33 @@ function AnimalDiscoverCard(){
             <Popup trigger={popupFullCard} setTrigger={setPopupFullCard}>
                 <Card>
                     <Card.Body className="bodyCard-animalDiscoverCard" >
-                    <Card.Img className="img-animalDiscoverCardPopup" ></Card.Img>
+                    <Card.Img className="img-animalDiscoverCardPopup" src={`http://127.0.0.1:8000${species.photo}`}></Card.Img>
                     <Card.Title className="title-animalDiscoverCard">
-                        <strong>hej csacs</strong>
+                        <strong>{species.name}</strong>
                     </Card.Title>
                     <Card.Text>
-                        oiacjsiocslakscjlkscajcaslkjsalckjcsalkjcaslkjacslkjcaslkjsaclkjcsalkcjsalkcsajklcjass
+                        {species.description}
                     </Card.Text>
                     <Card.Text>
-                        Długość życia: 8 lat
+                        Typ zwierzęcia: {species.type}
                     </Card.Text>
                     <Card.Text>
-                        Żywienie: Owies
+                        Długość życia: {species.lifetime}
                     </Card.Text>
                     <Card.Text>
-                        Średnia ilość dzieci przy porodzie: 4
+                        Żywienie: {species.nutrition}
                     </Card.Text>
                     <Card.Text>
-                        Środowisko życia: polny
+                        Średnia waga: {species.avg_weight} kg
                     </Card.Text>
                 </Card.Body>
                 </Card>
             </Popup>
 
             <Card.Body className="bodyCard-animalDiscoverCard" >
-                <Card.Img className="img-animalDiscoverCard" onClick={setPopupFullCard} ></Card.Img>
+                <Card.Img className="img-animalDiscoverCard" onClick={setPopupFullCard} src={`http://127.0.0.1:8000${species.photo}`}></Card.Img>
                 <Card.Title className="title-animalDiscoverCard">
-                    <strong>hej csacs</strong>
+                    <strong>{species.type} {species.name}</strong>
                 </Card.Title>
             </Card.Body>
         </Card>

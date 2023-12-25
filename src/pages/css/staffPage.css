@@ -104,13 +104,22 @@
 
 @media screen and (max-width: 700px){
     .colNotes-staff{
-        margin-left: 0;
+        margin: 0;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
     }
     .buttonAddWorker-staff{
         width: 90%;
     }
     .buttonAddTaskSelf-staff{
         width: auto;
+    }
+    .rowWorkers-staff{
+        height: auto;
+        width: 98vw;
+    }
+    .rowTasks-staff{
+        width: 98vw;
     }
 }
 

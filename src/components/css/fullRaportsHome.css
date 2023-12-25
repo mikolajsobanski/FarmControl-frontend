@@ -1,0 +1,15 @@
+.center-FullRaportsHome{
+    text-align: center;
+    padding: 0.4rem;
+}
+.row-FullRaportsHome{
+    padding: 0.2rem;
+}
+.mainDiv-FullRaportsHome{
+    height: 98%;
+    overflow-y: scroll;
+}
+
+.mainDiv-FullRaportsHome::-webkit-scrollbar{
+    display: none;
+}

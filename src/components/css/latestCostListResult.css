@@ -1,0 +1,11 @@
+.mainDiv-LatestCostsList{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.mainDiv-LatestCostsList::-webkit-scrollbar{
+    display: none;
+}
+.mainDiv-HealthStatusList::-webkit-scrollbar{
+    display: none;
+}

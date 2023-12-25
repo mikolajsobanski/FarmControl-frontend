@@ -6,12 +6,14 @@ import Footer from "../components/Footer"
 import { useDispatch, useSelector } from "react-redux"
 import Header from "../components/Header"
 import { logout} from'../data/actions/farmerActions'
-import VideoSection from "../components/VideoSection"
 import SearchBox from "../components/SearchBox"
+import SearchResults from "../components/SearchResults"
+import { Col } from "react-bootstrap"
 
 
 function HomePage(){
-    const [results, setResults] = useState([]);
+    const speciesSearch = useSelector(state => state.speciesSearch)
+    const { species, loading, error} = speciesSearch
 
     return (
         <div className="mainDiv-homePage">
@@ -19,9 +21,19 @@ function HomePage(){
             <div className="contentDiv-homePage">
             <Header />
             <div className="searchPanelDiv-homePage">
-            <SearchBox  setResults={setResults}/>
+            <SearchBox/>
             </div>
             
+            {species && species.length>0 ? (<>
+                <div className="resultsList-homePage">
+                {species.map(result => (
+                    <div >
+                        <SearchResults key={result.id} result={result} />
+                    </div>
+                                        
+                ))}           
+                </div>
+            </>) : ''}
 
             <div className="bottomContentDiv-homePage">
             <CopyWrites/>
